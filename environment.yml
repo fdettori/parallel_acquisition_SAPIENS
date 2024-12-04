@@ -1,0 +1,10 @@
+name: hand_landmark_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - opencv
+  - pandas
+  - matplotlib
+  - numpy
+  - pip

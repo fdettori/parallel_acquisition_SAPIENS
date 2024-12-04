@@ -19,7 +19,7 @@ csv_file = open('hand_landmarks.csv', 'w', newline='')
 csv_writer = csv.writer(csv_file)
 
 # Write the header row for CSV
-header = ['timestamp', 'hand', 'landmark_index', 'x', 'y', 'z']
+header = ['timestamp', 'hand', 'x', 'y', 'z']
 csv_writer.writerow(header)
 
 # STEP 4: Process the video stream frame by frame
@@ -46,7 +46,8 @@ while camera.isOpened():
         for hand_id, hand_landmarks in enumerate(detection_result.hand_landmarks):
             for landmark in hand_landmarks:
                 # Write the timestamp, hand id, landmark id, and (x, y, z) coordinates
-                csv_writer.writerow([timestamp, hand_id, landmark, 
+
+                csv_writer.writerow([timestamp, hand_id, 
                                      landmark.x, landmark.y, landmark.z])
 
         # Visualize landmarks on the frame
