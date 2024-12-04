@@ -1,8 +1,9 @@
 import mediapipe as mp
 from mediapipe.tasks import python
 from mediapipe.tasks.python import vision
-from utilities import *
+
 import cv2
+from utilities import *
 
 
 # STEP 2: Create an HandLandmarker object.
